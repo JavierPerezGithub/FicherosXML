@@ -22,6 +22,7 @@ public class CrearXMLEmpleadosBinObj {
 			ois = new ObjectInputStream(new FileInputStream("empleadosObj.dat"));
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
+			//DOM es el parsheador que vamos a implementar
 			DOMImplementation implementacion = db.getDOMImplementation();
 			
 			/* Creamos un documento vacío de nombre doc con el nodo raíz
