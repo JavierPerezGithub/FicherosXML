@@ -47,17 +47,22 @@ public class LeerXMLEmpleados {
 
 					//accedemos a la lista de elementos hijos del nodo que estamos manejando.
 					hijos = nodo.getChildNodes();
-
+					//recorrer la lista de nodos hijos del nodo que estamos manejando
 					for (int j = 0; j < hijos.getLength(); j++) {
+						//accedemnos a los elementos de dicha lista --> id, nombres, departamento y salario.
 						nodo2 = hijos.item(j);
-
+						
+						//para cada uno de estos nodos comprobamos que sean de tipo elemento
 						if (nodo2.getNodeType() == Node.ELEMENT_NODE) {
+							//sacamos por consola el nombre de la etiqueta tabulandola
 							System.out.println("\t\t" + nodo2.getNodeName());
-
+							//accedemos a la lista de elementos hijos
 							hijos2 = nodo2.getChildNodes();
 
 							//System.out.println("----Nº de hijos de " + nodo2.getNodeName() + ": " + hijos2.getLength());
-
+							
+							//como sabemos que el nodo2 ya contiene texto y por tanto solo tiene un nodo hijo,
+							//accedemos diréctamente al valor.
 							System.out.println("\t\t\t" + hijos2.item(0).getNodeValue());
 						}
 					}
