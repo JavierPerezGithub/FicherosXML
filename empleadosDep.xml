@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleados>
+    <empleado fec_alta="12/06/2017">
+        <id>1</id>
+        <Nombre>Alberto</Nombre>
+        <departamento>
+            <idDep>10</idDep>
+            <nomDep>Marketing</nomDep>
+            <locDep>Madrid</locDep>
+        </departamento>
+        <Salario>2000.0</Salario>
+    </empleado>
+    <empleado fec_alta="12/06/2017">
+        <id>2</id>
+        <Nombre>Guillermo</Nombre>
+        <departamento>
+            <idDep>20</idDep>
+            <nomDep>contabilidad</nomDep>
+            <locDep>Valladolid</locDep>
+        </departamento>
+        <Salario>1500.5</Salario>
+    </empleado>
+    <empleado fec_alta="12/06/2017">
+        <id>3</id>
+        <Nombre>Alejandro</Nombre>
+        <departamento>
+            <idDep>30</idDep>
+            <nomDep>comercial</nomDep>
+            <locDep>Madrid</locDep>
+        </departamento>
+        <Salario>3000.4</Salario>
+    </empleado>
+    <empleado fec_alta="12/06/2017">
+        <id>4</id>
+        <Nombre>Ana</Nombre>
+        <departamento>
+            <idDep>20</idDep>
+            <nomDep>Marketing</nomDep>
+            <locDep>Valladolid</locDep>
+        </departamento>
+        <Salario>2300.6</Salario>
+    </empleado>
+</empleados>
