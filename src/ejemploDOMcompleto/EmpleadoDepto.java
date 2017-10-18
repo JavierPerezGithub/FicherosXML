@@ -1,6 +1,8 @@
-package dom;
+package ejemploDOMcompleto;
 
 import java.io.Serializable;
+
+import dom.Departamento;
 
 public class EmpleadoDepto implements Serializable {
 

@@ -1,4 +1,4 @@
-package dom;
+package ejemploDOMcompleto;
 
 import java.io.EOFException;
 import java.io.File;
@@ -49,6 +49,8 @@ public class CrearXMLDOMEmpleadosDeptBin {
 			EmpleadoDepto emp = null;
 			Element elemento = null;
 			Element elementoHijo = null;
+			
+			//try manual para poner el EOFException al terminar el while
 			try {
 				while((emp = (EmpleadoDepto) ois.readObject()) !=null){
 					System.out.println("ID: " + emp.getId() 
@@ -62,12 +64,15 @@ public class CrearXMLDOMEmpleadosDeptBin {
 					
 					//Atributo
 					elemento.setAttribute("fec_alta", "12/06/2017");
+					//nodos hijos
 					crearElementoHijo(doc, elemento,"id",emp.getId()+"");
 					crearElementoHijo(doc, elemento,"Nombre",emp.getNombre());
 					
+					//otro nodo que va a contener dentro elementos hijos
 					elementoHijo = doc.createElement("departamento");
 					elemento.appendChild(elementoHijo);
 					
+					//nodos hijos
 					crearElementoHijo(doc, elementoHijo,"idDep",emp.getDep().getId()+"");
 					crearElementoHijo(doc, elementoHijo,"nomDep",emp.getDep().getNombre());
 					crearElementoHijo(doc, elementoHijo,"locDep",emp.getDep().getLocalizacion());
@@ -85,6 +90,7 @@ public class CrearXMLDOMEmpleadosDeptBin {
 
 			// Obtenemos un TransformerFactory
 			Transformer transformer = TransformerFactory.newInstance().newTransformer();
+			
 			// Le damos formato y realizamos la transformación del documento a fichero
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 			transformer.setOutputProperty(OutputKeys.METHOD, "xml"); 

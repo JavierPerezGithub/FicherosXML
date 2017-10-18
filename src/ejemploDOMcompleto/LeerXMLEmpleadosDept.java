@@ -1,4 +1,4 @@
-package dom;
+package ejemploDOMcompleto;
 
 import java.io.File;
 import java.io.IOException;

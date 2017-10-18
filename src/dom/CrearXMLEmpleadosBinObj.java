@@ -46,6 +46,7 @@ public class CrearXMLEmpleadosBinObj {
 					
 					crearElementoHijo(doc, elemento,"id",emp.getId()+"");
 					crearElementoHijo(doc, elemento,"Nombre",emp.getNombre());
+					crearElementoHijo(doc, elemento, "Javier", "2");
 					crearElementoHijo(doc, elemento,"Depto",emp.getDep()+"");
 					crearElementoHijo(doc, elemento,"Salario",emp.getSalario()+"");				
 				}	
